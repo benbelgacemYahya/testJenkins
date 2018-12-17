@@ -7,7 +7,7 @@ import java.util.Optional;
 public class Controller {
 
     @GetMapping(value = "/helloex", produces = "application/json")
-    public ResponseEntity<String> testExceptionHandling() {
+    public ResponseEntity<String> controller() {
       return ResponseEntity.ok("Salamou Alaykom V1") ;
     }
 
