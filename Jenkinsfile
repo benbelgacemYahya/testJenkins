@@ -1,20 +1,21 @@
 pipeline {
-  agent {
-    docker {
-      image '3.6.0-jdk-11-slim'
-    }
+    agent any
 
-  }
-  stages {
-    stage('Initialization') {
-      steps {
-        sh 'mvn clean'
-      }
+    stages {
+        stage('Build') {
+            steps {
+                echo 'Building..'
+            }
+        }
+        stage('Test') {
+            steps {
+                echo 'Testing..'
+            }
+        }
+        stage('Deploy') {
+            steps {
+                echo 'Deploying....'
+            }
+        }
     }
-    stage('Build') {
-      steps {
-        sh 'mvn install'
-      }
-    }
-  }
-}l
+}
