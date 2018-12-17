@@ -1,6 +1,6 @@
 pipeline {
-    agent any
-    stages {
+    agent { label 'dockerserver' }
+        stages {
         stage('Back-end') {
             agent {
                 docker { image 'maven:3-alpine' }
