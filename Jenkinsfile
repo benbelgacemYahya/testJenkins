@@ -1,5 +1,8 @@
 pipeline {
-   agent { label 'dockerserver' }
+  agent {
+    docker {
+      image '3.6.0-jdk-11-slim'
+    }
 
   }
   stages {
